@@ -1,0 +1,83 @@
+
+<div id="kt_body" class="bg-gray-50 min-h-screen flex items-center justify-center">
+    <!-- Root Container -->
+    <div id="kt_app_root" class="flex flex-col md:flex-row w-full max-w-screen-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+      
+      <!-- Left Section (Form Section) -->
+      <div class="flex flex-col justify-center p-8 w-full md:w-1/2">
+        <!-- Form -->
+        <div class="max-w-md mx-auto">
+          <h1 class="text-2xl font-bold text-gray-900 text-center mb-4">Sign In</h1>
+          <p class="text-gray-500 text-center mb-8">Your Social Campaigns</p>
+  
+          <!-- Social Login Buttons -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <button class="flex items-center justify-center bg-gray-100 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-200">
+              <img alt="Google Logo" src="assets/media/svg/brand-logos/google-icon.svg" class="h-4 mr-3" />
+              <span class="text-gray-700">Sign in with Google</span>
+            </button>
+            <button class="flex items-center justify-center bg-gray-100 border border-gray-300 rounded-md py-2 px-4 hover:bg-gray-200">
+              <img alt="Apple Logo" src="assets/media/svg/brand-logos/apple-black.svg" class="h-4 mr-3 hidden dark:block" />
+              <img alt="Apple Logo Dark" src="assets/media/svg/brand-logos/apple-black-dark.svg" class="h-4 mr-3 block dark:hidden" />
+              <span class="text-gray-700">Sign in with Apple</span>
+            </button>
+          </div>
+  
+          <!-- Divider -->
+          <div class="relative my-6">
+            <div class="absolute inset-0 flex items-center">
+              <div class="w-full border-t border-gray-300"></div>
+            </div>
+            <div class="relative flex justify-center text-sm">
+              <span class="px-3 bg-white text-gray-500">Or with email</span>
+            </div>
+          </div>
+  
+          <!-- Email and Password Fields -->
+          <form novalidate #form="ngForm" (submit)="onSubmit(form)">
+            <div class="mb-4">
+              <input placeholder="Username" #UserName="ngModel" name="UserName" autocomplete="off"
+              [(ngModel)]="formModel.UserName" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" />
+            </div>
+            <div class="mb-4">
+              <input type="password" placeholder="Password" name="password" autocomplete="off"
+                class="w-full px-4 py-2 border border-gray-300 rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" />
+            </div>
+  
+            <!-- Forgot Password -->
+            <div class="flex justify-between items-center mb-6">
+              <a href="#" class="text-sm text-indigo-600 hover:underline">Forgot Password?</a>
+            </div>
+  
+            <!-- Submit Button -->
+            <button type="submit"
+              class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-700">
+              Sign In
+            </button>
+          </form>
+  
+          <!-- Sign Up -->
+          <p class="text-center text-sm text-gray-500 mt-4">
+            Not a Member yet?
+            <a href="#" class="text-indigo-600 hover:underline">Sign up</a>
+          </p>
+        </div>
+      </div>
+  
+      <!-- Right Section (Image Section) -->
+      <div class="hidden md:flex md:w-1/2 bg-cover bg-center" style="background-image: url('assets/media/misc/auth-bg.png')">
+        <div class="flex flex-col items-center justify-center text-center text-white p-10">
+          <a href="#" class="mb-10">
+            <img src="assets/media/logos/custom-1.png" alt="Logo" class="h-16 md:h-20" />
+          </a>
+          <img src="assets/media/misc/auth-screens.png" alt="Auth Screens" class="w-56 md:w-80 mb-8" />
+          <h1 class="text-xl md:text-2xl font-bold mb-4">Fast, Efficient and Productive</h1>
+          <p class="text-sm md:text-base">
+            In this kind of post, <a href="#" class="text-yellow-400 underline">the blogger</a> introduces a person they’ve interviewed and provides some background information.
+          </p>
+        </div>
+      </div>
+    </div>
+</div>
+  

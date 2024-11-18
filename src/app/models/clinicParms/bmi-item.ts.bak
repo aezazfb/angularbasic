@@ -1,0 +1,13 @@
+export class BMIItem {
+    bmiID:number|null;
+    patientID:number |null;
+    height: number | null;
+    weight: number | null;
+    comments: string|null;
+    userID: number | null;
+    bmiDate: Date | null;
+    strBmiDate: string|null;
+    otherData:string | null;
+    constructor(){
+    }
+}

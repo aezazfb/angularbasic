@@ -1,0 +1,28 @@
+export class ClinicCalendarItem {
+    start: Date | null;
+    end: Date | null;
+    title: string | null;
+    appid: number | null;
+    content: string | null;
+    patientid: number | null;
+    mrn:string | null;
+    branchName: string | null;
+    backgroundColor:string | null;
+    isClose: boolean | null;
+    statusId: number|null;
+    appointmentTypeID: number|null;
+    constructor(){
+      this.start = new Date();
+      this.end = new Date();
+      this.title = "";
+      this.content = "";
+      this.appid = 0;
+      this.patientid = 0;
+      this.mrn = "";
+      this.branchName = "";
+      this.backgroundColor = 'green';
+      this.isClose = false;
+      this.statusId = 0;
+      this.appointmentTypeID = 0;
+    }
+}

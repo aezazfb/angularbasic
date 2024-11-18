@@ -1,0 +1,20 @@
+export class EventUpdateValue{
+    eventID : number;
+    content : string;
+    start : Date;
+    end : Date;
+    patientid : number;
+    checked : boolean;
+    statusId : number;
+    appointmentTypeID: number;
+    constructor(eventID, content, start, end, patientid, checked, statusId, appointmentTypeID){
+      this.eventID = eventID;
+      this.content = content;
+      this.start = start;
+      this.end = end;
+      this.patientid = patientid;
+      this.checked = checked;
+      this.statusId = statusId;
+      this.appointmentTypeID = appointmentTypeID;
+    }
+  }

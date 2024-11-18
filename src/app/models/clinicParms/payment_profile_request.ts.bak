@@ -1,0 +1,136 @@
+export class PaymentHistoryItem{
+  patientID: number;
+  paymentProfileId: string;
+  acctId: string;
+  retref: string;
+  amount: number;
+  paidAgainst: string;
+  status: string;
+  addby: number;
+  updatedBy: number|null;
+  addOn: string;
+  updatedOn: string|null;
+  jsonResponse: string|null;
+  subscriptionName : string;
+  paymentMode : string;
+  maskedCardNumber : string
+}
+
+export class RetrievePaymentRequestInput{
+  patientID: number;
+  profileId: string|null;
+  acctid: string|null;
+  retref: string|null;
+  branchId: number;
+}
+
+
+export class PaymentHistoryReportItemA{
+  firstName: string;
+  lastName: string;
+  middleName: string;
+  DOB: string;
+  patientID: number;
+  paymentProfileId: string;
+  acctId: string;
+  retref: string;
+  amount: number;
+  paidAgainst: string;
+  status: string;
+  addby: number;
+  updatedBy: number|null;
+  addOn: string;
+  updatedOn: string|null;
+  jsonResponse: string|null;
+}
+
+export class PaymentHistoryReportItem	{
+  paymentDetailId: number;
+  paymentProfileId: string;
+  acctId: string;
+  retref: string;
+  amount: number;
+  paidAgainst: string;
+  invoiceId: number;
+  status: string;
+  addby: number;
+  addbyName: string;
+  updatedBy: number;
+  addOn: string;
+  updatedOn: Date;
+  invoiceDate: string;
+  patientID: number;
+  paymentTag: string;
+  patient: {
+    patientID: number;
+    firstName: string;
+    lastName: string;
+    middleName: string;
+    genderID: number;
+    gpGenderID: number;
+    gender: string;
+    languageID: number;
+    languageName: string;
+    dateOfBirth: string;
+    mrn: string;
+    email: string;
+    inActive: boolean;
+    company: {
+      companyID: number;
+      companyName: string
+    };
+    branch: {
+      branchID: number;
+      branchName: string
+      npi: string;
+      merchantID: string;
+      paymentGateway: string
+    };
+    patientMode: {
+      patientModeID: number;
+      patientModeName: string
+    };
+    address: [
+      {
+        patientAddressID: number;
+        addressFull: string;
+        addressLine1: string;
+        addressLine2: string;
+        addressLine3: string;
+        city: string;
+        stateID: number;
+        stateName: string;
+        countryID: number;
+        countryName: string;
+        zipCode: string;
+        alternateAddressFull: string;
+        alternateAddressLine1: string;
+        alternateAddressLine2: string;
+        alternateAddressLine3: string;
+        alternateCity: string;
+        alternateStateID: number;
+        alternateStateName: string;
+        alternateCountryID: number;
+        alternateCountryName: string;
+        alternateZipCode: string
+      }
+    ];
+    contactDetail: [
+      {
+        patientID: number;
+        contactNumber: string
+      }
+    ];
+    insurances: [];
+    primaryContactNumber: string;
+    isDive: boolean,
+    physicianNPI,
+  };
+  details: []
+}
+
+export class RetrievePaymentReportInput{
+  fromDate: string|null;
+  toDate: string|null;
+  branchId: number;
+}

@@ -1,0 +1,36 @@
+export class ProductNotesDetail {
+      ExceptRecordCounts: number;
+      PatientRecordCounts: number;
+      RecordNum: number;
+      ProductNotesDetailID: number;
+      PatientID: number;
+      PatientName: string;
+      MRN: string;
+      InActive: boolean;
+      Creation: Date;
+      Reminder: Date | null;
+      SubjectID: number | null;
+      Subject: string;
+      BranchID: number | null;
+      BranchName: string;
+      Notes: string;
+      Source: string;
+      NoteSource: number;
+      IsResolved: boolean | null;
+      PatientInactive: boolean | null;
+      ResolvedBy: string;
+      GPSubjectID: number;
+      LastName: string;
+      Campaign: string;
+      Location: string;
+      TotalCount: number;
+      IsVisibleRemoveAlert: boolean;
+      IsVisibleAlertStatus: boolean;
+      IsVisibleRemoveException: boolean;
+      IsVisibleExceptionStatus: boolean;
+      ProductID: number;
+      EvoPartNumber: string;
+      ProductCode: string;
+      ProductName: string;
+      AddBy: string;
+}
