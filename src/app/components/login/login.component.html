@@ -34,16 +34,17 @@
           </div>
   
           <!-- Email and Password Fields -->
-          <form novalidate #form="ngForm" (submit)="onSubmit(form)">
+          <form novalidate #form="ngForm" (submit)="OnSubmit(form)">
             <div class="mb-4">
               <input placeholder="Username" #UserName="ngModel" name="UserName" autocomplete="off"
               [(ngModel)]="formModel.UserName" required
               class="w-full px-4 py-2 border border-gray-300 rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" />
             </div>
             <div class="mb-4">
-              <input type="password" placeholder="Password" name="password" autocomplete="off"
-                class="w-full px-4 py-2 border border-gray-300 rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" />
-            </div>
+                <input type="password" placeholder="Password" name="Password" autocomplete="off"
+                [(ngModel)]="formModel.Password" required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" />
+              </div>
   
             <!-- Forgot Password -->
             <div class="flex justify-between items-center mb-6">

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import moment from 'moment';
-import { environment } from '../../../environments/environment';
+import { environment } from '../../environments/environment';
 import store from 'store2';
 import { UserService } from './user.service';
 

@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { environment } from '../../../environments/environment';
+import { environment } from '../../environments/environment';
 import { throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-import { User } from '../../models/user';
+import { User } from '../models/user';
 import store from 'store2';
 
 @Injectable({
