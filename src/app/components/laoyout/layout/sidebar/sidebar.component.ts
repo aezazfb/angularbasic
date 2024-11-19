@@ -10,7 +10,7 @@ import { Component, HostListener } from '@angular/core';
 })
 export class SidebarComponent {
   isOpen = false; // Sidebar state
-
+  
   // Toggle the sidebar
   toggleSidebar() {
     this.isOpen = !this.isOpen;
@@ -20,6 +20,8 @@ export class SidebarComponent {
   closeSidebar() {
     this.isOpen = false;
   }
+  
+
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     const width = (event.target as Window).innerWidth;
